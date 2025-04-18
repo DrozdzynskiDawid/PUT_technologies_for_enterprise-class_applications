@@ -3,11 +3,10 @@ package lab.moviesbackend.controllers;
 import lab.moviesbackend.models.Movie;
 import lab.moviesbackend.repositories.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
@@ -26,5 +25,11 @@ public class MovieController {
     public List<String> getAllGenres() {
         List<String> genres = movieRepository.findAllGenres();
         return genres;
+    }
+
+    @GetMapping("/movies/{id}")
+    public Movie getMovieById(@PathVariable long id) {
+        Optional<Movie> movie = movieRepository.findById(id);
+        return movie.orElse(null);
     }
 }

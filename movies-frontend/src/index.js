@@ -2,22 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import MoviesList from "./components/MoviesList";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { FaShoppingCart } from "react-icons/fa";
-import GenresDropdown from "./components/GenresDropdown";
+import Main from "./pages/Main";
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import MovieDetails from "./pages/MovieDetails";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      <div className="main w-75 mt-2 mx-auto p-3 rounded fs-2">
-          <div className="d-flex">
-              <h1 className="mx-auto">Movies List App </h1>
-              <FaShoppingCart className="mx-2" />
-          </div>
-          <GenresDropdown />
-          <MoviesList />
-      </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/details/:id" element={<MovieDetails />} />
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
 
