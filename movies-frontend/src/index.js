@@ -10,8 +10,11 @@ import GenresDropdown from "./components/GenresDropdown";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      <div className="main">
-          <h2>Movies List App <FaShoppingCart /></h2>
+      <div className="main w-75 mt-2 mx-auto p-3 rounded fs-2">
+          <div className="d-flex">
+              <h1 className="mx-auto">Movies List App </h1>
+              <FaShoppingCart className="mx-2" />
+          </div>
           <GenresDropdown />
           <MoviesList />
       </div>

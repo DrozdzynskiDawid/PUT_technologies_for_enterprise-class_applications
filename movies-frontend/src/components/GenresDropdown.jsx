@@ -19,8 +19,7 @@ function GenresDropdown() {
     };
 
     return (
-        <div className="d-flex align-items-center gap-2">
-            <p>Filter: </p>
+        <div className="d-flex my-3">
             <DropdownButton id="dropdown-basic-button" title={selected} onSelect={handleSelect}>
                 {genres.map((genre, index) => (
                     <Dropdown.Item href="" eventKey={genre} key={index}>{genre}</Dropdown.Item>

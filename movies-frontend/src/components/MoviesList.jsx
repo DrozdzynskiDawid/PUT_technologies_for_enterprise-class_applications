@@ -11,13 +11,18 @@ function MoviesList() {
             .then(response => setMovies(response.data))
             .catch(error => console.error('Error fetching data: ', error));
     }, []);
-
+    console.log(movies);
     return (
-        <div>
+        <div className="fs-5">
             <ListGroup>
                 {movies.map((movie, index) => (
                     <ListGroup.Item key={index}>
-                        <p><b>{movie.title}</b>, {movie.genre}</p>
+                        <div><b>{movie.title}</b></div>
+                        <div className="d-flex">
+                            <p>Genre: {movie.genre}</p>
+                            <p>, Release Year: {movie.releaseYear}</p>
+                            <p>, Price: {movie.price}$</p>
+                        </div>
                     </ListGroup.Item>
                 ))}
             </ListGroup>
