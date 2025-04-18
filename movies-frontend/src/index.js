@@ -5,12 +5,14 @@ import reportWebVitals from './reportWebVitals';
 import MoviesList from "./components/MoviesList";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaShoppingCart } from "react-icons/fa";
+import GenresDropdown from "./components/GenresDropdown";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
       <div className="main">
           <h2>Movies List App <FaShoppingCart /></h2>
+          <GenresDropdown />
           <MoviesList />
       </div>
   </React.StrictMode>

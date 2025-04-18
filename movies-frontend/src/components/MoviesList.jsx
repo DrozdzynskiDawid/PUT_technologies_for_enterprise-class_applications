@@ -1,12 +1,27 @@
 import ListGroup from 'react-bootstrap/ListGroup';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import './MoviesList.css';
 
 function MoviesList() {
+    const [movies, setMovies] = useState([]);
+
+    useEffect(() => {
+        axios.get('http://localhost:8080/api/movies')
+            .then(response => setMovies(response.data))
+            .catch(error => console.error('Error fetching data: ', error));
+    }, []);
+
     return (
-        <ListGroup>
-            <ListGroup.Item>Inception</ListGroup.Item>
-            <ListGroup.Item>Interstellar</ListGroup.Item>
-            <ListGroup.Item>Man in Black</ListGroup.Item>
-        </ListGroup>
+        <div>
+            <ListGroup>
+                {movies.map((movie, index) => (
+                    <ListGroup.Item key={index}>
+                        <p><b>{movie.title}</b>, {movie.genre}</p>
+                    </ListGroup.Item>
+                ))}
+            </ListGroup>
+        </div>
     );
 }
 
