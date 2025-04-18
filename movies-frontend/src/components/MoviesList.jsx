@@ -6,7 +6,7 @@ import './MoviesList.css';
 import { useNavigate } from "react-router-dom";
 import {Button} from "react-bootstrap";
 
-function MoviesList() {
+function MoviesList({ selectedGenre }) {
     const [movies, setMovies] = useState([]);
     const navigate = useNavigate();
 
@@ -20,10 +20,14 @@ function MoviesList() {
         navigate(`/details/${movieId}`);
     };
 
+    const filteredMovies = selectedGenre === "Filter By Genre"
+        ? movies
+        : movies.filter(movie => movie.genre === selectedGenre);
+
     return (
         <div className="fs-5">
             <ListGroup>
-                {movies.map((movie, index) => (
+                {filteredMovies.map((movie, index) => (
                     <ListGroup.Item key={index} className="bgColor border-4 my-2 rounded">
                         <div><b>{movie.title}</b></div>
                         <div className="d-flex">
