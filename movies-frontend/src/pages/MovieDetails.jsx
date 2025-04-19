@@ -16,7 +16,7 @@ function MovieDetails() {
     return (
         <div className="w-50 mx-auto my-4">
             <h2>Movie Details</h2>
-            <Card className="bgColor">
+            <Card className="bg-body-secondary">
                 <Card.Body>
                     <Card.Title className="fs-1 mx-auto">{movie.title}</Card.Title>
                     <Card.Text className="mt-5"><b>Genre: </b>{movie.genre}</Card.Text>

@@ -1,4 +1,3 @@
-import './GenresDropdown.css'
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Dropdown from 'react-bootstrap/Dropdown';
@@ -19,7 +18,7 @@ function GenresDropdown({ selectedGenre, setSelectedGenre }) {
 
     return (
         <div className="d-flex my-3">
-            <DropdownButton id="dropdown-basic-button" title={selectedGenre} onSelect={handleSelect}>
+            <DropdownButton variant="secondary" id="dropdown-basic-button" title={selectedGenre} onSelect={handleSelect}>
                 <Dropdown.Item href="" eventKey={"Filter By Genre"}>Filter By Genre</Dropdown.Item>
                 {genres.map((genre, index) => (
                     <Dropdown.Item href="" eventKey={genre} key={index}>{genre}</Dropdown.Item>

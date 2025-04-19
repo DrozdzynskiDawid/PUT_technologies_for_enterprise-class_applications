@@ -4,8 +4,9 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Main from "./pages/Main";
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MovieDetails from "./pages/MovieDetails";
+import CartPage from "./pages/CartPage";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,6 +15,7 @@ root.render(
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/details/:id" element={<MovieDetails />} />
+        <Route path="/cart" element={<CartPage />} />
       </Routes>
     </Router>
   </React.StrictMode>
