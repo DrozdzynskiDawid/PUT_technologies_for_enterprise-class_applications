@@ -1,0 +1,15 @@
+INSERT INTO movie (title, genre, release_year, plot_description, price) VALUES
+('Inception', 'Sci-Fi', 2010, 'A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.', 9),
+('The Dark Knight', 'Action', 2008, 'When the menace known as The Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham.', 10),
+('Interstellar', 'Sci-Fi', 2014, 'A team of explorers travel through a wormhole in space in an attempt to ensure humanitys survival.', 12),
+('The Matrix', 'Sci-Fi', 1999, 'A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.', 8),
+('The Godfather', 'Crime', 1972, 'The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.', 15),
+('The Shawshank Redemption', 'Drama', 1994, 'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.', 10),
+('Pulp Fiction', 'Crime', 1994, 'The lives of two mob hitmen, a boxer, a gangsters wife, and a pair of diner bandits intertwine in four tales of violence and redemption.', 13),
+('Forrest Gump', 'Drama', 1994, 'The presidencies of Kennedy and Johnson, the Vietnam War, the events of 1960s America, love story, and the life of a slow-witted but kind-hearted man.', 11),
+('The Lion King', 'Animation', 1994, 'A young lion prince flees his kingdom only to learn the true meaning of responsibility and bravery.', 7),
+('The Avengers', 'Action', 2012, 'Earths mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.', 12),
+('Gladiator', 'Action', 2000, 'A former Roman general sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.', 14),
+('Titanic', 'Drama', 1997, 'A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.', 9),
+('Avengers: Endgame', 'Action', 2019, 'After the devastating events of Avengers: Infinity War, the Avengers assemble once again in order to reverse Thanos actions and restore balance to the universe.', 16),
+('The Prestige', 'Mystery', 2006, 'Two magicians engage in a bitter rivalry, each trying to best the other with increasingly dangerous tricks.', 13);
